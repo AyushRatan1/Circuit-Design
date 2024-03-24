@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Circuit Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header class="navbar">
+        <nav>
+            <h1 class="navbar-brand">CIRCUITS EXPERIENTIAL LEARNING PROJECT</h1>
+        </nav>
+    </header>
+    
+    <video id="video-bg" autoplay loop muted>
+        <source src="C:\Users\ayush\Desktop\seminar\seminar\media\vid.mp4" type="video/mp4" style="opacity: 20%;">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <div class="split">
+            <div class="left">
+                <video  class=vid autoplay loop muted playsinline>
+                    <source src="C:\Users\ayush\Desktop\Circuits\Untitled design (2).mp4"type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+            <div class="right">
+                <div class="inputs">
+                   
+                    <label for="r1">Resistor 1 (R1):</label>
+                    <input type="number" id="r1" placeholder="Enter R1 value">
+                    <label for="r2">Resistor 2 (R2):</label>
+                    <input type="number" id="r2" placeholder="Enter R2 value">
+                    <label for="is">Current Source (Is):</label>
+                    <input type="number" id="is" placeholder="Enter Is value">
+                    <label for="vs">Voltage Source (Vs):</label>
+                    <input type="number" id="vs" placeholder="Enter Vs value">
+                    <br>
+                    <button id="calculate-button">Calculate</button>
+                   
+                </div>
+            </div>
+        </div>
+        
+        <br><br><br>
+        <div class="split">
+            <div class="left">
+                <h1 class="txt"> Formulas</h1>
+                <br>
+                <h1>Super mesh equation   -V + R1xI1 + R2xI2 = 0</h1>
+                <br>
+                <h1>Current Source     Is=I2 - I1</h1>
+            </div>
+            <div class="right">
+                <h1 class="txt">Results</h1>
+                <br>
+                    <h1>I1: <span id="i1-result">0</span> Amps</h1>
+                    <br>
+                    <h1>I2: <span id="i2-result">0</span> Amps</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container2">
+        
+        <h1>Graphs for values of I1 and I2</h1>
+        <br>
+        <div class="input-container">
+            <label for="i1">I1:</label>
+            <input type="number" id="i1" placeholder="Enter I1">
+            <label for="i2">I2:</label>
+            <input type="number" id="i2" placeholder="Enter I2">
+            <button id="plotGraphs">Plot Graphs</button>
+        </div>
+    
+        <div class="graph-row">
+        <div class="graph-container">
+            <canvas id="currentDistributionChart">hii</canvas>
+            <p>Current Distribution: This graph visualizes the distribution of current across different nodes in the circuit.</p>
+        </div>
+        <div class="graph-container">
+            <canvas id="meshCurrentChart"></canvas>
+            <p>Mesh Current: This graph visualizes the mesh currents in the circuit.</p>
+        </div>
+        <div class="graph-container">
+            <canvas id="powerDistributionChart"></canvas>
+            <p>Power Distribution: This graph visualizes the distribution of power across different nodes in the circuit.</p>
+        </div>
+        
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    
+    <script src="script.js"></script>
+    <h3 style="margin-left: 770px;">Made By Ayush❤️</h3>
+</body>
+</html>
